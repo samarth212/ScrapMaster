@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 
 url = input("enter url:")
 element = input("enter target element:")
+elemFilter = input("filter by:")
+if elemFilter == "class" or "id":
+    elemName = input("class/id name:")
 
 response = requests.get(url)
 
