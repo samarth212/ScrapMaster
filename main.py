@@ -19,7 +19,8 @@ if response.status_code == 200:
         result = soup.find_all(element, class_ = elemName)
     elif elemFilter == "id":
         result = soup.find_all(id=elemName)
-    
+    else:
+        result = soup.find_all(element)
     print(result)
     
 
