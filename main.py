@@ -1,13 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = input("enter url:")
+url = input("enter url: ")
 
-element = input("enter target element:")
-elemFilter = input("filter by:")
-if elemFilter == "class" or elemFilter == "id":
-    elemName = input("class/id name:")
-format = input("format: html or text?")  
+element = input("enter target element: ")
+elemFilter = input("filter by: ")
+if elemFilter == "class" or elemFilter == "id ":
+    elemName = input("class/id name: ")
+format = input("format: html or text? ")  
 
 response = requests.get(url)
 
