@@ -7,7 +7,7 @@ element = input("enter target element:")
 elemFilter = input("filter by:")
 if elemFilter == "class" or elemFilter == "id":
     elemName = input("class/id name:")
-    
+format = input("format: html or text?")  
 
 response = requests.get(url)
 
@@ -21,7 +21,14 @@ if response.status_code == 200:
         result = soup.find_all(id=elemName)
     else:
         result = soup.find_all(element)
-    print(result)
+
+    if format == "html":
+        print(result)
+    elif format == "text":
+        for i in result:
+            print(i.text)
+    else:
+        print("please enter a valid format option")
     
 else:
     print("Failed to retrieve the webpage. Status code:", response.status_code)
