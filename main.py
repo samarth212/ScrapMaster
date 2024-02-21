@@ -9,16 +9,14 @@ if elemFilter == "class" or elemFilter == "id":
     elemName = input("class/id name:")
     
 
-
-
 response = requests.get(url)
 
 if response.status_code == 200:
     print("success!")
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    
-    result = soup.find_all(element)
+    if elemFilter == "class":
+        result = soup.find_all(element, class_ = elemName)
     print(result)
 
 else:
