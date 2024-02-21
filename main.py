@@ -17,7 +17,11 @@ if response.status_code == 200:
 
     if elemFilter == "class":
         result = soup.find_all(element, class_ = elemName)
+    elif elemFilter == "id":
+        result = soup.find_all(id=elemName)
+    
     print(result)
+    
 
 else:
     print("Failed to retrieve the webpage. Status code:", response.status_code)
