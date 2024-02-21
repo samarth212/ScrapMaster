@@ -23,6 +23,5 @@ if response.status_code == 200:
         result = soup.find_all(element)
     print(result)
     
-
 else:
     print("Failed to retrieve the webpage. Status code:", response.status_code)
