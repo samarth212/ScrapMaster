@@ -6,3 +6,17 @@ body{
     background-size: cover;
     color: white;
 }
+
+
+.title{
+    font-size: 110px;
+    font-weight: 700;
+    margin-left: 90px;
+    margin-top: 90px;
+    
+}
+
+.title p{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
