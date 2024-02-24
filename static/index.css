@@ -34,3 +34,23 @@ body{
 .viewer{
     padding-top: 10px;
 }
+
+input::placeholder{
+    color:rgba(204, 0, 255, 1);
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+
+#url{
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    color:rgba(204, 0, 255, 1);
+    font-size: 20px;
+    opacity: 0.8;
+}
