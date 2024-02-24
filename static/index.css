@@ -7,6 +7,9 @@ body{
     color: white;
 }
 
+.top{
+    display: flex;
+}
 
 .title{
     font-size: 110px;

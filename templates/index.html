@@ -12,10 +12,15 @@
     <link rel="stylesheet"href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
-    <div class="title">
-        <p>S C R A P</p>
-        <p>M A S T E R</p>
+    <div class="top">
+        <div class="title">
+            <p>S C R A P  M A S T E R</p>
+        </div>
+        <div>
+            <spline-viewer url="https://prod.spline.design/4PaMD0xuZHYOWpY0/scene.splinecode"></spline-viewer>
+        </div>
     </div>
+    
     
 
     <form action="/" method="post" class="forms">
@@ -37,4 +42,5 @@
         <input type="submit" value="Submit">
     </form>
 </body>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.54/build/spline-viewer.js"></script>
 </html>
