@@ -58,3 +58,25 @@ input::placeholder{
     margin-left: 20px;
 }
 
+#submit{
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    height: 50px;
+    width: 100px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 20px;
+    color:rgba(204, 0, 255, 1);
+    font-size: 20px;
+    opacity: 0.8;
+    background-color: black;
+    transition: width 0.4s;
+}
+#submit:hover{
+    opacity: 0.5;
+    width: 140px
+}
+
+.forms{
+    margin-top: 50px;
+}
