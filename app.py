@@ -43,6 +43,18 @@ def index():
         return redirect(url_for('result', url=url, element=element, elemFilter=elemFilter, elemName=elemName, format=format))
     else:
         return render_template('index.html')
+    
+@app.route('/result')
+def result():
+    url = request.args.get('url')
+    element = request.args.get('element')
+    elemFilter = request.args.get('elemFilter')
+    elemName = request.args.get('elemName')
+    format = request.args.get('format')
+    scraped_data = scraper(url, element, elemFilter, elemName, format)
+    return render_template('result.html', scraped_data=scraped_data)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
