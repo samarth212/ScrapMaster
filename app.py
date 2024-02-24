@@ -1,4 +1,4 @@
-from flask import Flask, send_file
+from flask import Flask, render_template, request, redirect, url_for
 import requests
 from bs4 import BeautifulSoup
 
@@ -32,9 +32,17 @@ def scraper(url, element, elemFilter, elemName, format):
 
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return send_file('index.html')
+    if request.method == 'POST':
+        url = request.form['url']
+        element = request.form['element']
+        elemFilter = request.form['elemFilter']
+        elemName = request.form['elemName']
+        format = request.form['format']
+        return redirect(url_for('result', url=url, element=element, elemFilter=elemFilter, elemName=elemName, format=format))
+    else:
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
