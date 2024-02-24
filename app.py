@@ -3,18 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
-@app.route('/')
 
 
-
-def scraper():
-    url = input("enter url: ")
-    element = input("enter target element: ")
-    elemFilter = input("filter by: ")
-    if elemFilter == "class" or elemFilter == "id ":
-        elemName = input("class/id name: ")
-    format = input("format: html or text? ")  
-
+def scraper(url, element, elemFilter, elemName, format):
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -29,19 +20,19 @@ def scraper():
             result = soup.find_all(element)
 
         if format == "html":
-            print(result)
+            return result
         elif format == "text":
             for i in result:
-                print(i.text)
+                return '\n'.join([i.text for i in result])
         else:
-            print("please enter a valid format option")
+            return "please enter a valid format option"
         
     else:
-        print("Failed to retrieve the webpage. Status code:", response.status_code) 
+        return "Failed to retrieve the webpage. Status code: " + str(response.status_code) 
 
 
 
-
+@app.route('/')
 def index():
     return send_file('index.html')
 
