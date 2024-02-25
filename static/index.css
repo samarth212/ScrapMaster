@@ -42,7 +42,7 @@ input::placeholder{
 }
 
 
-#url, #element, #elemFilter, #elemName, #format{
+#element, #elemFilter, #format{
     font-family: "Roboto Mono";
     font-weight: 700;
     width: 700px;
@@ -57,6 +57,21 @@ input::placeholder{
     margin-left: 20px;
     padding-left: 20px;
 
+}
+#url, #elemName{
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    width: 680px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color:rgba(204, 0, 255, 1);
+    font-size: 20px;
+    opacity: 0.77;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 20px;
+    padding-left: 20px;
 }
 
 #submit{
