@@ -1,0 +1,8 @@
+body{
+    font-family: "Roboto Mono";
+    background-image: linear-gradient(rgba(129, 3, 255, 1), rgba(129, 156, 207, 1));
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    color: white;
+}

@@ -109,7 +109,7 @@ input::placeholder{
     white-space: nowrap;
     margin: 0;
     letter-spacing: .03em;
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite alternate;
+    animation: typing 3.5s steps(30, end), blink-caret .5s 3.5s step-end forwards;
 }
 
 @keyframes typing {

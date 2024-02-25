@@ -38,9 +38,9 @@ def index():
     if request.method == 'POST':
         url = request.form['url']
         if not url:
-            return "Please enter a URL" 
+            return "<script>alert('Please enter a URL');</script>"
         elif not validators.url(url): 
-            return "Invalid URL. Please enter a valid URL."
+            return "<script>alert('Invalid URL. Please enter a valid URL.');</script>"
         element = request.form['element']
         elemFilter = request.form['elemFilter']
         elemName = request.form['elemName']
