@@ -39,6 +39,8 @@ def index():
         url = request.form['url']
         if not url:
             return "Please enter a URL" 
+        elif not validators.url(url): 
+            return "Invalid URL. Please enter a valid URL."
         element = request.form['element']
         elemFilter = request.form['elemFilter']
         elemName = request.form['elemName']
