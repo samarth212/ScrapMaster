@@ -101,3 +101,23 @@ input::placeholder{
     margin-top: 60px;
     margin-left: 60px;
 }
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid white; /* Adjust the border properties as needed */
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .03em;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    0% { border-color: white; }
+}
