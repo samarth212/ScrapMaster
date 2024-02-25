@@ -121,3 +121,16 @@ input::placeholder{
     from, to { border-color: transparent }
     0% { border-color: white; }
 }
+
+
+.about{
+    position: absolute;
+    font-size: 20px;
+    left: 40px;
+    top: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.about:hover{
+    color:rgba(204, 0, 255, 1);
+}
