@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 from bs4 import BeautifulSoup
+import validators
 
 app = Flask(__name__)
 
@@ -36,6 +37,8 @@ def scraper(url, element, elemFilter, elemName, format):
 def index():
     if request.method == 'POST':
         url = request.form['url']
+        if not url:
+            return "Please enter a URL" 
         element = request.form['element']
         elemFilter = request.form['elemFilter']
         elemName = request.form['elemName']
