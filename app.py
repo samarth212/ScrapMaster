@@ -38,16 +38,17 @@ def index():
     if request.method == 'POST':
         url = request.form['url']
         if not url:
-            return "<script>alert('Please enter a URL');</script>"
+            return redirect(url_for('index', alert='Please enter a URL'))
         elif not validators.url(url): 
-            return "<script>alert('Invalid URL. Please enter a valid URL.');</script>"
+            return redirect(url_for('index', alert='Invalid URL. Please enter a valid URL'))
         element = request.form['element']
         elemFilter = request.form['elemFilter']
         elemName = request.form['elemName']
         format = request.form['format']
         return redirect(url_for('result', url=url, element=element, elemFilter=elemFilter, elemName=elemName, format=format))
     else:
-        return render_template('index.html')
+        alert = request.args.get('alert')
+        return render_template('index.html', alert=alert)       
     
 @app.route('/result')
 def result():
