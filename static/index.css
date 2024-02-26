@@ -128,9 +128,9 @@ input::placeholder{
     font-size: 20px;
     left: 40px;
     top: 10px;
-    color: whitesmoke;
+    color:rgba(204, 0, 255, 1);
     text-decoration: none;
 }
 .about:hover{
-    color:rgba(204, 0, 255, 1);
+    color: white;
 }
