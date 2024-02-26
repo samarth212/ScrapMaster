@@ -1,0 +1,1 @@
+ScrapMaster is a basic web scraping tool that allows you to quickly get any data from a provided url. Simply paste a valid url, enter in the filters, if any, and how you want it to be formatted. This scraper was built using the bs4 library with the Flask python framework.
